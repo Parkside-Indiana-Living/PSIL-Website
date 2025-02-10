@@ -1,0 +1,360 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta name="description" content="Parkside Indiana Living LLC - Providing affordable living solutions in Chicago, Illinois.">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=PT+Serif:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
+    <link rel="shortcut icon" href="favicon.webp" type="image/webp">
+
+    <title>Parkside Indiana Living LLC</title>
+    <style>
+        .pt-serif-regular {
+            font-family: "PT Serif", serif;
+            font-weight: 400;
+            font-style: normal;
+        }
+
+        .pt-serif-bold {
+            font-family: "PT Serif", serif;
+            font-weight: 700;
+            font-style: normal;
+        }
+
+        body {
+            font-family: "PT Serif", "Times New Roman", serif;
+            margin: 0;
+        }
+
+        header {
+            background-color: #16a500;
+            color: #fff;
+
+            padding: 50px 200px 30px;
+        }
+
+        header > h1 {
+            margin: 0;
+        }
+
+        #container {
+            padding: 50px 200px 150px;
+            display: flex;
+            flex-direction: row;
+            gap: 100px;
+        }
+
+        #container > div {
+            min-width: 40%;
+            max-width: 60%;
+            display: flex;
+            flex-direction: column;
+        }
+
+        img {
+            border-radius: 5px;
+        }
+
+        a[href*="tel:"] {
+            text-decoration: none;
+        }
+
+        @media (max-width: 700px) {
+            #container {
+                padding: 25px 100px 0;
+                flex-direction: column;
+            }
+
+            #container > div {
+                max-width: 100%;
+            }
+
+            header {
+                background-color: #16a500;
+                color: #fff;
+
+                padding: 50px 100px 30px;
+            }
+        }
+
+        @media (max-width: 500px) {
+            #container {
+                padding: 25px 50px 0;
+                gap: 25px;
+            }
+
+            header {
+                padding: 50px 50px 30px;
+            }
+        }
+
+        #inquiry-form {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+        }
+
+        input[type=text], [type=email] {
+            padding: 7px 0;
+            border-radius: 0;
+            border: none;
+            border-bottom: solid 1px #0076bb;
+            transition: border-bottom 0.1s ease, margin-bottom 0.1s ease;
+            margin-bottom: 2px;
+        }
+
+        input[type=text]:focus, [type=email]:focus {
+            outline: none;
+            border-bottom: solid 3px #0076bb;
+            margin-bottom: 0px;
+        }
+
+        textarea:focus {
+            outline: solid 3px #b9e5ff;
+        }
+        
+        input[type=text]:disabled, [type=email]:disabled, textarea:disabled {
+            background-color: #dbdbdb;
+            color: #383838;
+            cursor: not-allowed;
+        }
+
+        textarea {
+            padding: 10px;
+            border-radius: 7px;
+            border: solid 1px #0076bb;
+            transition: outline 0.1s ease;
+            resize: none;
+            height: 200px;
+        }
+
+        textarea, input[type=text], input[type=email] {
+            font-family: "PT Serif", serif;
+            font-size: 16px;
+        }
+
+        button[type=submit] {
+            background-color: #16a500;
+            color: #fff;
+            font-size: 16px;
+            font-weight: 500;
+            border: none;
+
+            cursor: pointer;
+
+            font-family: "PT Serif", serif;
+            padding: 7px;
+            border-radius: 7px;
+            box-shadow: 0 2px 3px 1px #0000001c;
+        }
+
+        button[type=submit]:focus {
+            outline: solid 3px #b0c7ad;
+            transition: outline 0.1s ease;
+        }
+
+        button[type=submit]:disabled {
+            transition: background-color 0.1s ease;
+            background-color: rgb(149, 149, 149);
+        }
+
+        .professional-contact-decoration-bar {
+            width: 65px;
+            height: 10px;
+            background-color: rgb(255, 191, 0);
+        }
+
+        .hidden {
+            display: none;
+        }
+
+        .error {
+            color: #f00;
+            font-weight: 600;
+            font-size: 14px;
+        }
+
+        .success {
+            color: #16a500;
+            font-weight: 600;
+            font-size: 14px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Parkside Indiana Living LLC</h1>
+        <p>Providing affordable living solutions in Washington Park, Chicago.</p>
+    </header>
+
+    <main id="container">
+        <div>
+            <section>
+                <div class="professional-contact-decoration-bar"></div>
+                <h2>Contact</h2>
+                <p>
+                    For inquiries, please email:<br>
+                    <a href="mailto:inquiry@parksideindianaliving.com">inquiry@parksideindianaliving.com</a>
+                </p>
+                <p>
+                    For all other matters, please email:<br>
+                    <a href="mailto:service@parksideindianaliving.com">service@parksideindianaliving.com</a>
+                </p>
+                <p>
+                    Telephone: <a href="tel:+1 (708) 960-9658">+1 (708) 960-9658</a>
+                </p>
+            </section>
+            <section>
+                <h2>Business Address</h2>
+                <p>
+                    Please send mail to the following address:<br><br>
+                    205 North Michigan Ave Suite 810<br>
+                    Chicago<br>
+                    Illinois 60601
+                </p>
+            </section>
+
+            <form id="inquiry-form">
+                <h2>Inquiry</h2>
+                <input id="name" type="text" placeholder="Your Name" spellcheck="false" required>
+                <input id="email" type="email" placeholder="Contact Email" spellcheck="false" required>
+                <textarea id="email-body" required></textarea>
+                <span id="error-message" class="error hidden"></span>
+                <span id="success-message" class="success hidden"></span>
+                <button type="submit" id="send-email-btn">Send Email</button>
+            </form>
+        </div>
+        <div style="gap: 0;">
+            <img src="home.jpg" alt="Photo of houses during daytime">
+            <span style="color: gray; font-size: 10px; margin: 5px 0; font-family: sans-serif;">Photo Courtesy of Curtis Adams, Pexels</span>
+        </div>
+    </main>
+    <script>
+        const emailApiURL = "https://email.frontend-api.parksideindianaliving.com/api/send-email";
+
+        const inquiryForm = document.getElementById("inquiry-form");
+        const nameInput = document.getElementById("name");
+        const emailInput = document.getElementById("email");
+        const emailBodyTextArea = document.getElementById("email-body");
+        const sendEmailBtn = document.getElementById("send-email-btn");
+        
+        const errorMessageSpan = document.getElementById("error-message");
+        const successMessageSpan = document.getElementById("success-message");
+
+        async function sendEmail(name, email, body) {
+            const response = await fetch(emailApiURL, {
+                method: "POST",
+                body: JSON.stringify({
+                    name: name,
+                    from: email,
+                    body: body
+                })
+            });
+
+            const json = await response.json();
+            return json;
+        }
+
+        function disableForm() {
+            nameInput.disabled = true;
+            emailInput.disabled = true;
+            emailBodyTextArea.disabled = true;
+            sendEmailBtn.disabled = true;
+        }
+
+        function enableForm() {
+            nameInput.disabled = false;
+            emailInput.disabled = false;
+            emailBodyTextArea.disabled = false;
+            sendEmailBtn.disabled = false;
+        }
+
+        function changeNameValue(newValue) {
+            nameInput.value = newValue;
+        }
+
+        function changeSendEmailBtnText(text) {
+            sendEmailBtn.textContent = text;
+        }
+
+        function setErrorMessage(message) {
+            if(!message) {
+                errorMessageSpan.textContent = "";
+                errorMessageSpan.classList.add("hidden");
+
+                return;
+            }
+
+            errorMessageSpan.textContent = message;
+            errorMessageSpan.classList.remove("hidden");
+        }
+
+        function setSuccessMessage(message) {
+            if(!message) {
+                successMessageSpan.textContent = "";
+                successMessageSpan.classList.add("hidden");
+
+                return;
+            }
+
+            successMessageSpan.textContent = message;
+            successMessageSpan.classList.remove("hidden");
+        }
+
+        async function onSendEmailSubmit(e) {
+            e.preventDefault();
+
+            let name = nameInput.value.trim();
+            let email = emailInput.value.trim();
+            let body = emailBodyTextArea.value.trim();
+
+            if(name.includes("@") || name.includes("<") || name.includes(">") || !name) {
+                setErrorMessage("Please enter a valid name in the name field.");
+                return;
+            }
+
+            if(email.toLowerCase().endsWith("@parksideindianaliving.com")) {
+                setErrorMessage("Please enter your own contact email.");
+                return;
+            }
+
+            if(!body) {
+                setErrorMessage("Please write an email body.");
+                return;
+            }
+
+            setErrorMessage();
+            disableForm();
+            changeSendEmailBtnText("Sending...");
+
+            let response;
+
+            try {
+                response = await sendEmail(name, email, body);
+            } catch(err) {
+                changeSendEmailBtnText("Send Email");
+                enableForm();
+                setErrorMessage("An error occured: " + err);
+
+                return;
+            }
+
+            if(!response.success) {
+                setErrorMessage("msg" in response ? response.msg : "An error occured while trying to send the email. Please try emailing inquiry@parksideindianaliving.com direcly from your email client. We apologize for the inconvenience.");
+                changeSendEmailBtnText("An Error Occured");
+
+                return;
+            }
+
+            setSuccessMessage("Success! Your email has been sent.");
+            changeSendEmailBtnText("Email Sent");
+        }
+
+        inquiryForm.addEventListener("submit", onSendEmailSubmit);
+    </script>
+</body>
+</html>
